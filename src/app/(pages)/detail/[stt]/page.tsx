@@ -1,6 +1,7 @@
 import React from "react";
-import { IShoeType } from "../../about/page";
+
 import { getShoeDetaiLById } from "@/app/service/shoeApi";
+import { IShoeType } from "@/app/types/shoe";
 
 const DetailShoePage = async ({ params }: any) => {
   const { stt } = await params;

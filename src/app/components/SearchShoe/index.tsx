@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { getListProductByKeyWord } from "@/app/service/shoeApi";
 import { IShoeType } from "@/app/types/shoe";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import _ from "lodash";
 
 const SearchShoe = ({
@@ -12,7 +12,7 @@ const SearchShoe = ({
   initDataListShoe: IShoeType[];
 }) => {
   const [listShoe, setListShoe] = useState<IShoeType[]>(initDataListShoe);
-  const searchParams = useSearchParams(); //đọc dữ liệu từ url
+  // const searchParams = useSearchParams(); //đọc dữ liệu từ url
   const router = useRouter(); //thay đổi dữ liệu trên url
 
   const handleRenderListShoe = _.debounce(async (keyWord: string) => {
@@ -26,7 +26,7 @@ const SearchShoe = ({
   }, 500);
 
   const handleOnchangeSearch = async (e) => {
-    let value = e.target.value;
+    const value = e.target.value;
 
     handleRenderListShoe(value);
   };
