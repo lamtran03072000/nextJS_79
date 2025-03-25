@@ -3,11 +3,15 @@ import React from "react";
 import { getShoeDetaiLById } from "@/app/service/shoeApi";
 import { IShoeType } from "@/app/types/shoe";
 
-const DetailShoePage = async ({ params }: any) => {
+const DetailShoePage = async ({
+  params,
+}: {
+  params: Promise<{ stt: string }>;
+}) => {
   const { stt } = await params;
   console.log("id sản phẩm ", stt);
 
-  const shoeDetail: IShoeType = await getShoeDetaiLById(stt);
+  const shoeDetail: IShoeType = await getShoeDetaiLById(Number(stt));
 
   return (
     <div key={shoeDetail?.id}>

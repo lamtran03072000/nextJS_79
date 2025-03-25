@@ -25,7 +25,9 @@ const SearchShoe = ({
     }
   }, 500);
 
-  const handleOnchangeSearch = async (e) => {
+  const handleOnchangeSearch = async (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     const value = e.target.value;
 
     handleRenderListShoe(value);
