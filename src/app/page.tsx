@@ -8,7 +8,7 @@ export const metadata = {
     title: "Shoes App - facebook - lâm trần",
     description:
       "Explore our wide range of shoes with the best prices and quality.",
-    url: "https://shoesshopbc70.vercel.app",
+    url: "https://next-js-79-nhtt.vercel.app",
     images: [
       {
         url: "https://apistore.cybersoft.edu.vn/images/van-old-school.png",
